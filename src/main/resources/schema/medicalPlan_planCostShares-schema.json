@@ -1,0 +1,50 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://example.com/planCostShares-schema.json",
+  "title": "PlanCostShares",
+  "description": "Schema for the planCostShares part of the Medical Plan",
+  "type": "object",
+  "properties": {
+    "planCostShares": {
+      "$id": "#/properties/planCostShares",
+      "type": "object",
+      "properties": {
+        "deductible": {
+          "$id": "#/properties/planCostShares/properties/deductible",
+          "type": "integer",
+          "default": 0,
+          "examples": [2000]
+        },
+        "_org": {
+          "$id": "#/properties/planCostShares/properties/_org",
+          "type": "string",
+          "default": "",
+          "examples": ["example.com"],
+          "pattern": "^(.*)$"
+        },
+        "copay": {
+          "$id": "#/properties/planCostShares/properties/copay",
+          "type": "integer",
+          "default": 0,
+          "examples": [23]
+        },
+        "objectId": {
+          "$id": "#/properties/planCostShares/properties/objectId",
+          "type": "string",
+          "default": "",
+          "examples": ["1234vxc2324sdf-501"],
+          "readOnly": true
+        },
+        "objectType": {
+          "$id": "#/properties/planCostShares/properties/objectType",
+          "type": "string",
+          "default": "",
+          "examples": ["membercostshare"],
+          "readOnly": true
+        }
+      },
+      "required": ["copay"]
+    }
+  },
+  "required": ["planCostShares"]
+}

@@ -1,0 +1,45 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://example.com/planCostShares-schema.json",
+  "title": "PlanCostShares",
+  "description": "Schema for the planCostShares part of the Medical Plan",
+  "type": "object",
+  "properties": {
+
+        "creationDate": {
+          "$id": "#/properties/creationDate",
+          "title": "creationDate schema",
+          "default": "",
+          "examples": ["12-12-2017"],
+          "type": "string"
+        },
+        "_org": {
+          "$id": "#/properties/_org",
+          "type": "string",
+          "default": "",
+          "examples": ["example.com"],
+          "pattern": "^(.*)$"
+        },
+        "planType": {
+          "$id": "#/properties/planType",
+          "type": "string",
+          "default": "",
+          "examples": ["inNetwork"]
+        },
+        "objectId": {
+          "$id": "#/properties/objectId",
+          "type": "string",
+          "default": "",
+          "examples": ["1234vxc2324sdf-508"],
+          "readOnly": true
+        },
+        "objectType": {
+          "$id": "#/properties/objectType",
+          "type": "string",
+          "default": "",
+          "examples": ["plan"]
+        }
+      },
+  "required": [],
+  "additionalProperties": false
+}
